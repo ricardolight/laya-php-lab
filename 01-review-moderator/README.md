@@ -3,7 +3,7 @@
 Self-hosted review moderation for PHP: every product review is classified for **spam**, **abuse** and
 **sentiment** by [Laya](https://github.com/NandhaKishorM/laya) through
 [LayaPHP](https://github.com/marcreichel/laya-php), then routed to **publish**, **manual-review** or **reject**.
-No LLM API, no per-call fees: the model runs on your own server, and every answer comes with a calibrated
+No LLM API, no per-call fees: the model runs on your own server, and every answer comes with a
 confidence that decides when a person has to look.
 
 > Project 1 of 5 in my [LayaPHP learning roadmap](../ROADMAP.md).
@@ -14,7 +14,7 @@ confidence that decides when a person has to look.
 |---|---|---|
 | Output | free text you have to parse | typed answers: P(yes), a label, a level |
 | Off-menu answers | possible | impossible — it only scores the options you give |
-| Confidence | a number the model *writes* | calibrated probability from a single forward pass |
+| Confidence | a number the model *writes* | a probability from one forward pass, trained to be calibrated (but over-confident as shipped, so thresholds get fit on my own data in Project 3) |
 | Cost | per token, per call | your own CPU/GPU, unlimited calls |
 | Data | leaves your infrastructure | stays on your server |
 
