@@ -153,7 +153,7 @@ final class ModerateCommand extends Command
         } catch (LayaException $e) {
             $io->error([
                 $e->getMessage(),
-                'Start it with `docker compose up -d --wait` (see laya-php/vps/SETUP.md), or try the CLI with --fake.',
+                'Start it with `docker compose up -d --wait` (see vps/SETUP.md), or try the CLI with --fake.',
             ]);
 
             return false;

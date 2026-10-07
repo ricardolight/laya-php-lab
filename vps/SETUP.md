@@ -1,7 +1,7 @@
 # Setup VPS untuk LayaPHP
 
 Panduan sekali jalan supaya VPS (8 vCPU, 24 GB RAM, tanpa GPU) bisa menjalankan `laya-serve` dan semua
-project di `laya-php/`. Alurnya: **kode ditulis & di-push dari Claude Code (cloud) → di VPS tinggal `git pull`
+project di repo ini. Alurnya: **kode ditulis & di-push dari Claude Code (cloud) → di VPS tinggal `git pull`
 → jalankan dengan model asli.**
 
 > Ganti `<user>`, `<vps-ip>`, dan `<ssh-port>` dengan punyamu. Jangan commit IP, user, atau key ke repo.
@@ -42,34 +42,22 @@ composer --version
 
 Nanti di Fase 4–5 (Laravel) tambah: `php8.4-sqlite3 php8.4-redis php8.4-fpm nginx redis-server supervisor`.
 
-## 4. Clone repo (private) pakai deploy key
+## 4. Clone repo
 
-Repo `ai-roadmap-lab` private, jadi VPS butuh akses baca:
-
-```bash
-ssh-keygen -t ed25519 -C "laya-vps" -f ~/.ssh/ai-roadmap-lab -N ""
-cat ~/.ssh/ai-roadmap-lab.pub
-```
-
-Copy isi `.pub` → GitHub repo **Settings → Deploy keys → Add deploy key** (centang *read-only*, cukup).
+Repo ini public, jadi VPS cukup clone lewat HTTPS, tanpa deploy key:
 
 ```bash
-cat >> ~/.ssh/config <<'EOF'
-Host github-ai-roadmap-lab
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/ai-roadmap-lab
-EOF
-
-git clone git@github-ai-roadmap-lab:ricardolight/ai-roadmap-lab.git
-cd ai-roadmap-lab
-git checkout claude/ecstatic-ramanujan-rjpq7y   # branch kerja sampai di-merge ke main
+git clone https://github.com/ricardolight/laya-php-lab.git
+cd laya-php-lab
 ```
+
+> Kalau suatu saat repo dibuat private, pakai deploy key read-only: `ssh-keygen -t ed25519 -f ~/.ssh/laya-php-lab -N ""`,
+> tambahkan file `.pub` di GitHub repo **Settings → Deploy keys**, lalu clone lewat SSH.
 
 ## 5. Jalankan `laya-serve`
 
 ```bash
-cd laya-php/vps
+cd vps
 cp .env.example .env
 sed -i "s/^LAYA_API_KEY=.*/LAYA_API_KEY=$(openssl rand -hex 32)/" .env
 
@@ -129,12 +117,12 @@ Catat hasilnya di tabel "Results on the real model" di `01-review-moderator/READ
 ## 8. Workflow harian
 
 ```bash
-cd ~/ai-roadmap-lab
+cd ~/laya-php-lab
 git pull
 # kalau composer.lock sebuah project berubah:
-(cd laya-php/<project> && composer install)
-# kalau laya-php/vps/compose.yaml berubah:
-(cd laya-php/vps && docker compose up -d --build --wait)
+(cd <project> && composer install)
+# kalau vps/compose.yaml berubah:
+(cd vps && docker compose up -d --build --wait)
 ```
 
 ## Akses dari laptop (opsional)
