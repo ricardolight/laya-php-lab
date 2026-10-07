@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use ReviewModerator\Console\ModerateCommand;
+use Symfony\Component\Console\Application;
+
+require __DIR__.'/../vendor/autoload.php';
+
+$application = new Application('laya-review-moderator', '1.0.0');
+$application->addCommand(new ModerateCommand(defaultOutput: dirname(__DIR__).'/output/moderation-latest.json'));
+$application->setDefaultCommand('moderate', true);
+$application->run();

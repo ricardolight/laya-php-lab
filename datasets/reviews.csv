@@ -1,0 +1,41 @@
+id,lang,text,spam,abuse,sentiment
+r01,en,"I bought this coffee grinder last week. The build quality is excellent and it works really well, but shipping was slow and the box arrived damaged.",no,no,neutral
+r02,en,"Absolutely love these headphones. Battery lasts all week and the noise cancelling is superb.",no,no,positive
+r03,en,"The product works, but delivery took too long.",no,no,neutral
+r04,en,"Stopped working after two days. Waste of money, I want a refund.",no,no,negative
+r05,en,"Decent kettle for the price. Nothing special, does the job.",no,no,neutral
+r06,en,"Exactly as described, fast delivery, would buy again!",no,no,positive
+r07,en,"The strap broke the first time I used it. Very disappointed with the quality.",no,no,negative
+r08,en,"Oh great, another charger that charges nothing. Fantastic purchase.",no,no,negative
+r09,en,"It's fine I guess.",no,no,neutral
+r10,en,"Comfortable chair. The assembly instructions were confusing, but customer service helped me quickly.",no,no,positive
+r11,en,"Get designer watches at 90% off!!! Visit cheap-watches.example now, limited stock.",yes,no,
+r12,en,"Earn $500 a day working from home, DM me on Telegram for details.",yes,no,
+r13,en,"Check out my channel for unboxing videos, subscribe and like!",yes,no,
+r14,en,"Not sure about this blender, but my cousin sells better ones at blendmart.example, use code SAVE20.",yes,no,
+r15,en,"The courier was a lazy idiot who threw the parcel over the fence. Product is ok.",no,yes,neutral
+r16,en,"Whoever designed this is a moron and should be fired. Garbage.",no,yes,negative
+r17,en,"The seller is a scammer and a liar, I hope your shop burns down.",no,yes,negative
+r18,en,"Terrible product, the worst I have ever bought. Do not buy.",no,no,negative
+r19,id,"Barangnya bagus banget, pengiriman cepat, packing rapi. Mantap!",no,no,positive
+r20,id,"Kualitas oke, tapi warnanya beda dengan yang di foto.",no,no,neutral
+r21,id,"Kecewa berat, baru dipakai seminggu sudah rusak.",no,no,negative
+r22,id,"Sesuai deskripsi. Harga standar.",no,no,neutral
+r23,id,"Suaranya jernih, bass-nya mantul. Recommended seller!",no,no,positive
+r24,id,"Pengiriman lama banget, hampir dua minggu baru sampai. Barangnya sih lumayan.",no,no,neutral
+r25,id,"Wah keren, beneran awet. Sudah setahun masih normal.",no,no,positive
+r26,id,"Jelek, nggak sesuai ekspektasi. Nyesel beli.",no,no,negative
+r27,id,"Ok",no,no,neutral
+r28,id,"Bagus sih, cuma agak berisik kalau dipakai lama.",no,no,neutral
+r29,id,"Promo slot gacor hari ini, deposit 10rb dapat bonus 100%! Kunjungi situs-gacor.example",yes,no,
+r30,id,"Butuh dana cepat? Pinjaman online tanpa jaminan, cair 5 menit. Hubungi WA admin.",yes,no,
+r31,id,"Follow IG kami @tokomurah.example untuk diskon spesial member!",yes,no,
+r32,id,"Mau penghasilan tambahan? Join bisnis online modal HP doang, chat admin sekarang.",yes,no,
+r33,id,"Penjualnya goblok, ditanya baik-baik malah nyolot. Barangnya biasa aja.",no,yes,negative
+r34,id,"Kurirnya kurang ajar, paket dilempar. Dasar tolol.",no,yes,negative
+r35,id,"Admin toko ini bodoh semua, mending tutup aja tokonya.",no,yes,negative
+r36,id,"Produk ini sampah, kualitasnya sangat buruk.",no,no,negative
+r37,id,"Overall oke sih, worth it buat harga segini. Cuma delivery-nya agak lama.",no,no,positive
+r38,en,"⭐⭐⭐⭐⭐",no,no,positive
+r39,en,"Not bad at all, actually better than I expected.",no,no,positive
+r40,en,"Product arrived. Have not tried it yet.",no,no,neutral

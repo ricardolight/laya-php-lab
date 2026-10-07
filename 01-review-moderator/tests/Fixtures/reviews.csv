@@ -1,0 +1,5 @@
+id,lang,text,spam,abuse,sentiment
+a1,en,"Great grinder, works perfectly.",no,no,positive
+a2,id,"Promo slot gacor, kunjungi situs-gacor.example",yes,no,
+a3,en,"Arrived late,
+but it works.",no,no,neutral

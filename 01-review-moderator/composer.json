@@ -1,0 +1,50 @@
+{
+    "name": "ricardolight/laya-review-moderator",
+    "description": "Self-hosted review moderation CLI: spam, abuse and sentiment classification with LayaPHP.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "guzzlehttp/guzzle": "^8.2",
+        "marcreichel/laya-php": "^1.2",
+        "symfony/console": "^8.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.32",
+        "pestphp/pest": "^5.2",
+        "phpstan/phpstan": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ReviewModerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/moderate"
+    ],
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse --no-progress",
+        "lint": "pint --test",
+        "format": "pint",
+        "check": [
+            "@lint",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
